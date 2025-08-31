@@ -42,7 +42,7 @@ $(function(){
   });
  });
 
-$('#wrapper').on('#catch').click(function(){
+$('#wrapper').on('click','#catch',function(){
   let catch_pokemon = Math.random() < 0.5;
 
   if(catch_pokemon){
@@ -69,6 +69,10 @@ $('#wrapper').on('#catch').click(function(){
   `;
   $('#wrapper').html(failHtml);
   }
+});
+
+$('[data-js="reset"]').on('click',function (){
+  $('#wrapper').show();
 });
 
 });
